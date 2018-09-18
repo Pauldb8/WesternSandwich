@@ -106,4 +106,8 @@ export class CartPage {
     checkout() {
         this.navController.push('checkout-detail', {'cart': this.cart});
     }
+
+    goHome(){
+        this.navController.push('productCatalog');
+    }
 }

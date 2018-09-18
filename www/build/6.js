@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 844:
+/***/ 719:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddToCartSuccessModule", function() { return AddToCartSuccessModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__success__ = __webpack_require__(857);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__success__ = __webpack_require__(732);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,13 +41,13 @@ var AddToCartSuccessModule = (function () {
 
 /***/ }),
 
-/***/ 857:
+/***/ 732:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddToCartSuccessPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -74,7 +74,7 @@ var AddToCartSuccessPage = (function () {
     };
     AddToCartSuccessPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-cart-success',template:/*ion-inline-start:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/product-detail/success/success.html"*/'<ion-content>\n    <ion-card>\n        <ion-card-header>\n            <svg class="feather">\n                <use xlink:href="assets/icon/feather-sprite.svg#check-circle" />\n            </svg>\n            <ion-card-title>Added to your bag</ion-card-title>\n        </ion-card-header>\n        <ion-card-content>\n            <button ion-button full outline round icon-start (click)="keepShopping();">\n                Keep Shopping\n            </button>\n            <button ion-button block round icon-end (click)="goToBag();">\n                Go to Your Bag\n                <svg class="feather">\n                    <use xlink:href="assets/icon/feather-sprite.svg#shopping-bag" />\n                </svg>\n            </button>\n        </ion-card-content>\n\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/product-detail/success/success.html"*/
+            selector: 'page-add-cart-success',template:/*ion-inline-start:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\product-detail\success\success.html"*/'<ion-content>\n\n    <ion-card>\n\n        <ion-card-header>\n\n            <svg class="feather">\n\n                <use xlink:href="assets/icon/feather-sprite.svg#check-circle" />\n\n            </svg>\n\n            <ion-card-title>Ajouté au panier</ion-card-title>\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n            <button ion-button full outline round icon-start (click)="keepShopping();">\n\n                Continuer\n\n            </button>\n\n            <button ion-button block round icon-end (click)="goToBag();">\n\n                Se rendre au panier\n\n                <svg class="feather">\n\n                    <use xlink:href="assets/icon/feather-sprite.svg#shopping-bag" />\n\n                </svg>\n\n            </button>\n\n        </ion-card-content>\n\n\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\product-detail\success\success.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */],

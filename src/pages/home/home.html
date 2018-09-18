@@ -2,28 +2,32 @@
     <ion-grid no-padding>
         <ion-row>
             <ion-col>
-                <img src="assets/imgs/full-logo.png" />
+                <h1 text-center>Western Sandwich</h1>
             </ion-col>
         </ion-row>
         <ion-row class="info">
             <ion-col>
-                <h2>Bright Cosmetics</h2>
-                <p>Be Inspired By Our Wide Selection Of Luxury Cosmetics At Affordable Prices.</p>
+                <p text-justify> 
+                    Un grand choix d'une variété de sandwichs et de pâtes maisons qui vont régaler vos papilles.
+                    Complémenter le tout d'une boisson fraîche, et on vous pouvez venir retirer votre menu ou on vous le livre chez vous!
+                </p>
                 <button ion-button block round icon-end (click)="getProductCatalog();" [ngStyle]="{'background-color': buttonColor}">
-                    Browse Catalog
+                    Passer commande
                     <svg class="feather">
                         <use xlink:href="assets/imgs/catalogbook.svg"/>
                     </svg>
                 </button>
-
-                <button ion-button icon-start clear class="text-only">
-                    <svg class="feather">
-                        <use xlink:href="assets/icon/feather-sprite.svg#help-circle"/>
-                    </svg>
-                    More Information
-                </button>
+                <p text-center>
+                    <br />Méthode de paiements acceptées:
+                    <br> 
+                    <img src="../../assets/imgs/paypal-logo.png">  
+                    <img src="../../assets/imgs/bancontact-logo.png">
+                    <ion-icon name="ios-cash-outline"></ion-icon>
+                </p> 
             </ion-col>
         </ion-row>
-        <ion-row class="fill"></ion-row>
+        <ion-row class="fill" text-center>
+            <p color="text-light">&copy; Western Sandwich 2018</p>  
+        </ion-row>
     </ion-grid>
 </ion-content>

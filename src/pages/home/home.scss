@@ -1,25 +1,43 @@
 page-home {
     ion-content.content {
-        background: #ff117e; /* Old browsers */
-        background: -moz-linear-gradient(45deg, #ff117e 40%, #ff8126 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(45deg, #ff117e 40%,#ff8126 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(45deg, #ff117e 40%,#ff8126 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        // background: #ff117e; /* Old browsers */
+        // background: -moz-linear-gradient(45deg, #ff117e 40%, #ff8126 100%); /* FF3.6-15 */
+        // background: -webkit-linear-gradient(45deg, #ff117e 40%,#ff8126 100%); /* Chrome10-25,Safari5.1-6 */
+        // background: linear-gradient(45deg, #ff117e 40%,#ff8126 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+        background-image: url(../../assets/imgs/sandwich.jpg);
+        background-size: contain; 
+
+        h1{
+            color: white;
+            font-family: Raleway;
+            font-size: 3em;
+            text-shadow: 2px 2px 3px black;
+            font-variant: small-caps;
+            margin: 50px 0px;
+        }
 
         ion-grid.grid {
             height: 100%;
 
-            img {
-                width: 195px;
-                height: auto;
-                margin-left: auto;
-                margin-right: auto;
-                display: block;
-                margin-top: 10%;
-            }
+            // img {
+            //     width: 195px;
+            //     height: auto;
+            //     margin-left: auto;
+            //     margin-right: auto;
+            //     display: block;
+            //     margin-top: 10%;
+            // }
 
             ion-row.fill {
                 background: white;
                 flex: 1;
+                align-items: flex-end;
+
+                p{
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
     
             ion-row.info {
@@ -28,7 +46,7 @@ page-home {
                 background:white;
                 border-top-left-radius: 10%;
                 border-top-right-radius: 10%;
-
+ 
                 h2 {
                     margin-top: 24px;
                     text-align: center;
@@ -37,10 +55,19 @@ page-home {
                 }
 
                 p {
-                    text-align: center;
                     margin-bottom: 24px;
-                    font-size: 1.2em;
+                    font-size: 1.2em;  
                     line-height: 1.5em;
+                }
+
+                img{
+                    height: 35px; 
+                    margin-top: 50px;
+                    margin-right: 20px;
+                }
+
+                ion-icon{
+                    font-size: 3em;
                 }
             }
         }

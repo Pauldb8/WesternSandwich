@@ -11,9 +11,9 @@ export class CartProgress {
     @Input('current') current: number;
 
     private elements: string[] = [
-        "Details",
-        "Payment",
-        "Confirm"
+        "Détails",
+        "Paiement",
+        "Confirmation" 
     ]
 
     getElements(): Array<number> {

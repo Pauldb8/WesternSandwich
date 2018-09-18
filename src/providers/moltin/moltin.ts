@@ -1,4 +1,4 @@
-import { gateway as MoltinGateway } from '@moltin/sdk';
+import { gateway as MoltinGateway } from '@moltin/sdk'; 
 import { Observable } from 'rxjs';
 import { MoltinProduct } from './models/product';
 import { MoltinProducts } from './models/product';
@@ -10,20 +10,19 @@ import { MoltinOrder } from './models/order';
 @Injectable()
 export class Moltin {
     private moltin = MoltinGateway({
-        client_id: 'u8cV0fAtS8ELXcyxWY2r4deLTHs1i3NkgV8rt7ZqWX'
+        client_id: 'tTsYECRZnsBBsm0ZY9dsFHYcH37IOZqyBcjMjyEi3a' 
     });
 
     constructor(public httpClient: HttpClient) {
-
     }
 
     //get all Products
     getProducts(): Promise<MoltinProducts> {
-          let request = this.moltin.Products.With(["main_image","categories"]);
+          let request = this.moltin.Products.With(["main_image", "categories"]);
           return request.All().then((products) => {
               let product = products.data[0];
               if (!product) {
-                  throw {"error": "No product found"};
+                  throw {"error": "No product found"}; 
               }
               //pass on to the next one
               return products

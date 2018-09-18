@@ -1,6 +1,6 @@
 webpackJsonp([10],{
 
-/***/ 199:
+/***/ 173:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,52 +13,52 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 199;
+webpackEmptyAsyncContext.id = 173;
 
 /***/ }),
 
-/***/ 243:
+/***/ 217:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/cart/cart.module": [
-		838,
+		712,
 		4
 	],
 	"../pages/checkout-confirmation/checkout-confirmation.module": [
-		839,
+		714,
 		2
 	],
 	"../pages/checkout-detail/checkout-detail.module": [
-		840,
+		713,
 		1
 	],
 	"../pages/checkout-payment/checkout-payment.module": [
-		846,
+		715,
 		0
 	],
 	"../pages/home/home.module": [
-		841,
+		716,
 		9
 	],
 	"../pages/product-catalog/product-catalog.module": [
-		842,
+		717,
 		8
 	],
 	"../pages/product-detail/product-detail.module": [
-		843,
+		718,
 		7
 	],
 	"../pages/product-detail/success/success.module": [
-		844,
+		719,
 		6
 	],
 	"../pages/product-list/product-list.module": [
-		845,
+		720,
 		5
 	],
 	"../pages/receipt/receipt.module": [
-		847,
+		721,
 		3
 	]
 };
@@ -73,21 +73,21 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 243;
+webpackAsyncContext.id = 217;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 410:
+/***/ 356:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Moltin; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__moltin_sdk__ = __webpack_require__(436);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__moltin_sdk__ = __webpack_require__(382);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__moltin_sdk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__moltin_sdk__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(538);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(412);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -106,7 +106,7 @@ var Moltin = (function () {
     function Moltin(httpClient) {
         this.httpClient = httpClient;
         this.moltin = Object(__WEBPACK_IMPORTED_MODULE_0__moltin_sdk__["gateway"])({
-            client_id: 'u8cV0fAtS8ELXcyxWY2r4deLTHs1i3NkgV8rt7ZqWX'
+            client_id: 'tTsYECRZnsBBsm0ZY9dsFHYcH37IOZqyBcjMjyEi3a'
         });
     }
     //get all Products
@@ -317,13 +317,13 @@ var Moltin = (function () {
 
 /***/ }),
 
-/***/ 411:
+/***/ 357:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(412);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(416);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(358);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(362);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -331,17 +331,17 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 416:
+/***/ 362:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(837);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(370);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_moltin_moltin__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(711);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_moltin_moltin__ = __webpack_require__(356);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -371,14 +371,14 @@ var AppModule = (function () {
                 }, {
                     links: [
                         { loadChildren: '../pages/cart/cart.module#CartModule', name: 'cart', segment: 'cart', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/checkout-confirmation/checkout-confirmation.module#CheckoutConfirmationModule', name: 'checkout-confirmation', segment: 'checkout-confirmation', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/checkout-detail/checkout-detail.module#CheckoutDetailModule', name: 'checkout-detail', segment: 'checkout-detail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/checkout-confirmation/checkout-confirmation.module#CheckoutConfirmationModule', name: 'checkout-confirmation', segment: 'checkout-confirmation', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/checkout-payment/checkout-payment.module#CheckoutPaymentModule', name: 'checkout-payment', segment: 'checkout-payment', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomeModule', name: 'home', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/product-catalog/product-catalog.module#ProductCatalogModule', name: 'productCatalog', segment: 'productCatalog', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/product-detail/product-detail.module#ProductDetailModule', name: 'product', segment: 'product-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/product-detail/success/success.module#AddToCartSuccessModule', name: 'add-cart-success', segment: 'success', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/product-list/product-list.module#ProductListModule', name: 'productList', segment: 'productList', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/checkout-payment/checkout-payment.module#CheckoutPaymentModule', name: 'checkout-payment', segment: 'checkout-payment', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/receipt/receipt.module#ReceiptPageModule', name: 'receipt', segment: 'receipt', priority: 'low', defaultHistory: [] }
                     ]
                 })
@@ -401,41 +401,27 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 441:
+/***/ 396:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 443:
+/***/ 398:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 478:
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 479:
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 837:
+/***/ 711:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MobileSelfCheckoutApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -454,7 +440,7 @@ var MobileSelfCheckoutApp = (function () {
         });
     }
     MobileSelfCheckoutApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/georgefitzgibbons/dev/mobile-checkout/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/georgefitzgibbons/dev/mobile-checkout/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]])
     ], MobileSelfCheckoutApp);
@@ -465,5 +451,5 @@ var MobileSelfCheckoutApp = (function () {
 
 /***/ })
 
-},[411]);
+},[357]);
 //# sourceMappingURL=main.js.map

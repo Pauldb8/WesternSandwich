@@ -73,4 +73,16 @@ page-cart {
             border-color: color($colors, primary);
         }
     }
+
+    ion-grid{
+        ion-icon{
+            font-size: 5em;
+            margin: 50px 0px;
+        }
+
+        h2{
+            margin: 0px;
+            margin-bottom: 50px;
+        }
+    }
 }

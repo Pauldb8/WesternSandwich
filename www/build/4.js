@@ -1,15 +1,15 @@
 webpackJsonp([4],{
 
-/***/ 838:
+/***/ 712:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartModule", function() { return CartModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart__ = __webpack_require__(850);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_button_select__ = __webpack_require__(851);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart__ = __webpack_require__(724);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_button_select__ = __webpack_require__(725);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,14 +44,14 @@ var CartModule = (function () {
 
 /***/ }),
 
-/***/ 850:
+/***/ 724:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CartPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_moltin_moltin__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_moltin_moltin__ = __webpack_require__(356);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -142,9 +142,12 @@ var CartPage = (function () {
     CartPage.prototype.checkout = function () {
         this.navController.push('checkout-detail', { 'cart': this.cart });
     };
+    CartPage.prototype.goHome = function () {
+        this.navController.push('productCatalog');
+    };
     CartPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cart',template:/*ion-inline-start:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/cart/cart.html"*/'<ion-header>\n    <ion-navbar class="light">\n        <ion-title>\n            Your Bag <ion-badge *ngIf="cartData.length > 0">{{ cartData.length }}</ion-badge>\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n    \n<ion-content>\n    <ion-list>\n        <div class="container" *ngFor="let item of cartData">\n            <ion-item no-lines>\n                <ion-thumbnail item-start>\n                    <img src="{{ getProductImage(item.product_id) }}">\n                </ion-thumbnail>\n                <h2>{{ item.name }}</h2>\n                <span>{{ getProductCategory(item.product_id) }}</span>\n                <ion-note item-end>\n                    {{ item.meta.display_price.with_tax.value.formatted }}\n                </ion-note>\n            </ion-item>\n            <ion-grid>\n                <ion-row>\n                    <ion-col id="quantity-{{item.id}}">\n                        <button-select [item]="item" label="Quantity" (onChange)="onChangeQuantity($event);"></button-select>\n                    </ion-col>\n                    <ion-col>\n                        <button ion-button full round outline (click)="onDeleteItem(item);">\n                            <svg class="feather">\n                                <use xlink:href="assets/icon/feather-sprite.svg#trash-2" />\n                            </svg>\n                        </button>\n                    </ion-col>\n                </ion-row>\n            </ion-grid>\n        </div>\n    </ion-list>\n</ion-content>\n\n<ion-footer *ngIf="cart.meta != null && cart.data.length > 0">\n    <ion-toolbar>\n        <ion-grid>\n            <ion-row class="subtotal">\n                <h2><span>Subtotal: </span>{{ cart.meta.display_price.with_tax.formatted }}</h2>\n            </ion-row>\n            <ion-row>\n                <ion-col>\n                    <button ion-button full outline round icon-start (click)="scanAnotherItem();">\n                        <svg class="feather">\n                            <use xlink:href="assets/icon/feather-sprite.svg#maximize" />\n                        </svg>\n                        Scan Item\n                    </button>\n                </ion-col>\n                <ion-col>\n                    <button ion-button block round icon-end (click)="checkout();">\n                        Checkout\n                        <svg class="feather">\n                            <use xlink:href="assets/icon/feather-sprite.svg#arrow-right" />\n                        </svg>\n                    </button>\n                </ion-col>\n            </ion-row>\n        </ion-grid>\n    </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/cart/cart.html"*/
+            selector: 'page-cart',template:/*ion-inline-start:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\cart\cart.html"*/'<ion-header>\n\n    <ion-navbar class="light">\n\n        <ion-title>\n\n            Votre panier <ion-badge *ngIf="cartData.length > 0">{{ cartData.length }}</ion-badge>\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n    \n\n<ion-content>\n\n    <ion-list>\n\n        <div class="container" *ngFor="let item of cartData">\n\n            <ion-item no-lines>\n\n                <ion-thumbnail item-start>\n\n                    <img src="{{ getProductImage(item.product_id) }}">\n\n                </ion-thumbnail>\n\n                <h2>{{ item.name }}</h2>\n\n                <span>{{ getProductCategory(item.product_id) }}</span>\n\n                <ion-note item-end>\n\n                    {{ item.meta.display_price.with_tax.value.formatted }}\n\n                </ion-note>\n\n            </ion-item>\n\n            <ion-grid>\n\n                <ion-row>\n\n                    <ion-col id="quantity-{{item.id}}">\n\n                        <button-select [item]="item" label="Quantity" (onChange)="onChangeQuantity($event);"></button-select>\n\n                    </ion-col>\n\n                    <ion-col>\n\n                        <button ion-button full round outline (click)="onDeleteItem(item);">\n\n                            <svg class="feather">\n\n                                <use xlink:href="assets/icon/feather-sprite.svg#trash-2" />\n\n                            </svg>\n\n                        </button>\n\n                    </ion-col>\n\n                </ion-row>\n\n            </ion-grid>\n\n        </div>\n\n    </ion-list>\n\n    <ion-grid *ngIf="cart.data.length == 0">\n\n        <ion-row>\n\n            <ion-col text-center>\n\n                <ion-icon name="ios-cart-outline" text-center></ion-icon><br>\n\n                <h2>Votre panier est vide.</h2>\n\n                <button ion-button block round icon-end (click)="goHome();" [ngStyle]="{\'background-color\': buttonColor}">\n\n                    Passer commande\n\n                    <svg class="feather">\n\n                        <use xlink:href="assets/imgs/catalogbook.svg"/>\n\n                    </svg>\n\n                </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n\n\n<ion-footer *ngIf="cart.meta != null && cart.data.length > 0">\n\n    <ion-toolbar>\n\n        <ion-grid>\n\n            <ion-row class="subtotal">\n\n                <h2><span>Sous-total: </span>{{ cart.meta.display_price.with_tax.formatted }}</h2>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col>\n\n                    <button ion-button block round icon-end (click)="checkout();">\n\n                        Commander\n\n                        <svg class="feather">\n\n                            <use xlink:href="assets/icon/feather-sprite.svg#arrow-right" />\n\n                        </svg>\n\n                    </button>\n\n                </ion-col>\n\n            </ion-row>\n\n        </ion-grid>\n\n    </ion-toolbar>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\cart\cart.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_moltin_moltin__["a" /* Moltin */],
@@ -158,13 +161,13 @@ var CartPage = (function () {
 
 /***/ }),
 
-/***/ 851:
+/***/ 725:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ButtonSelect; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -219,7 +222,7 @@ var ButtonSelect = (function () {
     ], ButtonSelect.prototype, "onChange", void 0);
     ButtonSelect = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'button-select',template:/*ion-inline-start:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/cart/components/button-select.html"*/'<ion-item [hidden]="true">\n    <ion-label>{{ label }}</ion-label>\n    <ion-select (ionChange)="onQuantityChange()">\n        <ion-option *ngFor="let value of getQuantityOptions()" [value]="value">{{value}}</ion-option>\n    </ion-select>\n</ion-item>\n<button ion-button full round outline (click)="openQuantity();">\n    x{{ item.quantity }}\n</button>'/*ion-inline-end:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/cart/components/button-select.html"*/
+            selector: 'button-select',template:/*ion-inline-start:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\cart\components\button-select.html"*/'<ion-item [hidden]="true">\n\n    <ion-label>{{ label }}</ion-label>\n\n    <ion-select (ionChange)="onQuantityChange()">\n\n        <ion-option *ngFor="let value of getQuantityOptions()" [value]="value">{{value}}</ion-option>\n\n    </ion-select>\n\n</ion-item>\n\n<button ion-button full round outline (click)="openQuantity();">\n\n    x{{ item.quantity }}\n\n</button>'/*ion-inline-end:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\cart\components\button-select.html"*/
         })
     ], ButtonSelect);
     return ButtonSelect;

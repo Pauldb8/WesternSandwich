@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar class="light">
         <ion-title>
-            Your Bag <ion-badge *ngIf="cartData.length > 0">{{ cartData.length }}</ion-badge>
+            Votre panier <ion-badge *ngIf="cartData.length > 0">{{ cartData.length }}</ion-badge>
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -35,18 +35,32 @@
             </ion-grid>
         </div>
     </ion-list>
+    <ion-grid *ngIf="cart.data.length == 0">
+        <ion-row>
+            <ion-col text-center>
+                <ion-icon name="ios-cart-outline" text-center></ion-icon><br>
+                <h2>Votre panier est vide.</h2>
+                <button ion-button block round icon-end (click)="goHome();" [ngStyle]="{'background-color': buttonColor}">
+                    Passer commande
+                    <svg class="feather">
+                        <use xlink:href="assets/imgs/catalogbook.svg"/>
+                    </svg>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
 
 <ion-footer *ngIf="cart.meta != null && cart.data.length > 0">
     <ion-toolbar>
         <ion-grid>
             <ion-row class="subtotal">
-                <h2><span>Subtotal: </span>{{ cart.meta.display_price.with_tax.formatted }}</h2>
+                <h2><span>Sous-total: </span>{{ cart.meta.display_price.with_tax.formatted }}</h2>
             </ion-row>
             <ion-row>
                 <ion-col>
                     <button ion-button block round icon-end (click)="checkout();">
-                        Checkout
+                        Commander
                         <svg class="feather">
                             <use xlink:href="assets/icon/feather-sprite.svg#arrow-right" />
                         </svg>

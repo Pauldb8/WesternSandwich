@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, ModalController} from 'ionic-angular';
+import { IonicPage, ModalController, NavController} from 'ionic-angular';
+import { ProductCatalog } from '../product-catalog/product-catalog';
 
 @IonicPage({
     name: 'home',
@@ -13,14 +14,16 @@ export class HomePage {
 
     buttonColor: string = '#FFFFFF'; //Default Color
 
-    constructor(
-        private modalController: ModalController
+    constructor(private modalController: ModalController,
+        private nav: NavController
     ) {
 
     }
+ 
     getProductCatalog() {
-      let productCatalogPage = this.modalController.create('productCatalog');
-      productCatalogPage.present();
+        this.nav.push("productCatalog");  
+    //   let productCatalogPage = this.modalController.create('productCatalog');
+    //   productCatalogPage.present();
     }
     
 }

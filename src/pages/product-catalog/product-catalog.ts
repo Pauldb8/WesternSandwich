@@ -27,9 +27,9 @@ export class ProductCatalog {
     private categoryList = [];
     private filteredCatFusionAthletic = [];
     private filteredCatMakeup = [];
-    private filteredCatSkin = [];
-    private filteredHair = [];
-    private filteredBodyCare = [];
+    private listSandwichs = [];
+    private listPates = [];
+    private listBoissons = [];
     
     constructor(
         //protocols
@@ -74,8 +74,8 @@ export class ProductCatalog {
 
           console.log("lists",this.productList);
           for (var i=0; i<this.productList.length; i++) {
-            if (this.productList[i]["categoriesName"]=="Facial Skincare") {
-              this.filteredCatSkin.push({
+            if (this.productList[i]["categoriesName"]=="Sandwichs") {
+              this.listSandwichs.push({
                 products: this.productList[i],
                 catName: this.productList[i]["categoriesName"],
                 image:  this.productList[i]["image"],
@@ -83,8 +83,8 @@ export class ProductCatalog {
                 productFormattedPrice:  this.productList[i]["meta"]["display_price"]["with_tax"]["formatted"]
               })
             }
-            else if (this.productList[i]["categoriesName"]=="Haircare") {
-              this.filteredHair.push({
+            else if (this.productList[i]["categoriesName"]=="Pâtes") {
+              this.listPates.push({
                 products: this.productList[i],
                 catName: this.productList[i]["categoriesName"],
                 image:  this.productList[i]["image"],
@@ -92,9 +92,9 @@ export class ProductCatalog {
                 productFormattedPrice:  this.productList[i]["meta"]["display_price"]["with_tax"]["formatted"]
                 })
             }
-            else if (this.productList[i]["categoriesName"]=="Body Skincare") {
-              this.filteredBodyCare.push({
-                products: this.productList[i],
+            else if (this.productList[i]["categoriesName"]=="Boissons") {
+              this.listBoissons.push({
+                products: this.productList[i], 
                 catName: this.productList[i]["categoriesName"],
                 image:  this.productList[i]["image"],
                 productName:  this.productList[i]["name"],
@@ -111,33 +111,33 @@ export class ProductCatalog {
     //Actions
     closeModal() {
       let HomePage = this.modalController.create('home')
-      HomePage.present();
+      HomePage.present(); 
     }
 
     //view all
     getProductList(categorySelected) {
       console.log("categorySelected", categorySelected)
-      if(categorySelected == 'Haircare')
+      if(categorySelected == 'Sandwichs')
       {
           let productListPage = this.modalController.create('productList', {
-          'categoryName': "Haircare",
-          'products' : this.filteredHair
+          'categoryName': "Sandwichs",
+          'products' : this.listSandwichs
         })
         productListPage.present();
       }
-      if(categorySelected == 'Facial Skincare')
+      if(categorySelected == 'Pâtes')
       {
           let productListPage = this.modalController.create('productList', {
-          'categoryName': "Facial Skincare",
-          'products' : this.filteredCatSkin
+          'categoryName': "Pates",
+          'products' : this.listPates
         })
         productListPage.present();
       }
-      if(categorySelected == 'Body Skincare')
+      if(categorySelected == 'Boissons')
       {
           let productListPage = this.modalController.create('productList', {
-          'categoryName': "Facial Skincare",
-          'products' : this.filteredCatSkin
+          'categoryName': "Boissons",
+          'products' : this.listBoissons
         })
         productListPage.present();
       }

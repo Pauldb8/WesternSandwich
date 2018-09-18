@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar class="grey">
         <ion-title>
-            Checkout
+            Paiement
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -14,20 +14,20 @@
     </ion-grid>
     <ion-grid padding>
         <ion-row>
-            <h2>Your Details</h2>
+            <h2>Vos coordonnées</h2>
         </ion-row>
         <ion-row>
             <ion-col>
                 <form [formGroup]="form">
                     <ion-item no-lines>
-                        <ion-input formControlName="name" placeholder="Your Name" class="rounded"></ion-input>
+                        <ion-input formControlName="name" placeholder="Votre nom" class="rounded"></ion-input>
                     </ion-item>
                     <ion-item no-lines>
-                        <ion-input formControlName="email" placeholder="Your Email" class="rounded"></ion-input>
+                        <ion-input formControlName="email" placeholder="Votre email" class="rounded"></ion-input>
                     </ion-item>
                     <ion-item no-lines>
                         <button ion-button block round icon-end (click)="pay();" [disabled]="!form.valid">
-                            Continue to Payment
+                            Continuer vers le paiement
                             <svg class="feather">
                                 <use xlink:href="assets/icon/feather-sprite.svg#arrow-right" />
                             </svg>

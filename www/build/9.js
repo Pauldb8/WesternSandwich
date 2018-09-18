@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 841:
+/***/ 716:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeModule", function() { return HomeModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(854);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(729);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,13 +41,13 @@ var HomeModule = (function () {
 
 /***/ }),
 
-/***/ 854:
+/***/ 729:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,19 +60,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var HomePage = (function () {
-    function HomePage(modalController) {
+    function HomePage(modalController, nav) {
         this.modalController = modalController;
+        this.nav = nav;
         this.buttonColor = '#FFFFFF'; //Default Color
     }
     HomePage.prototype.getProductCatalog = function () {
-        var productCatalogPage = this.modalController.create('productCatalog');
-        productCatalogPage.present();
+        this.nav.push("productCatalog");
+        //   let productCatalogPage = this.modalController.create('productCatalog');
+        //   productCatalogPage.present();
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/home/home.html"*/'<ion-content>\n    <ion-grid no-padding>\n        <ion-row>\n            <ion-col>\n                <img src="assets/imgs/full-logo.png" />\n            </ion-col>\n        </ion-row>\n        <ion-row class="info">\n            <ion-col>\n                <h2>Bright Cosmetics</h2>\n                <p>Be Inspired By Our Wide Selection Of Luxury Cosmetics At Affordable Prices.</p>\n                <button ion-button block round icon-end (click)="getProductCatalog();" [ngStyle]="{\'background-color\': buttonColor}">\n                    Browse Catalog\n                    <svg class="feather">\n                        <use xlink:href="assets/imgs/catalogbook.svg"/>\n                    </svg>\n                </button>\n\n                <button ion-button icon-start clear class="text-only">\n                    <svg class="feather">\n                        <use xlink:href="assets/icon/feather-sprite.svg#help-circle"/>\n                    </svg>\n                    More Information\n                </button>\n            </ion-col>\n        </ion-row>\n        <ion-row class="fill"></ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\home\home.html"*/'<ion-content>\n\n    <ion-grid no-padding>\n\n        <ion-row>\n\n            <ion-col>\n\n                <h1 text-center>Western Sandwich</h1>\n\n            </ion-col>\n\n        </ion-row>\n\n        <ion-row class="info">\n\n            <ion-col>\n\n                <p text-justify> \n\n                    Un grand choix d\'une variété de sandwichs et de pâtes maisons qui vont régaler vos papilles.\n\n                    Complémenter le tout d\'une boisson fraîche, et on vous pouvez venir retirer votre menu ou on vous le livre chez vous!\n\n                </p>\n\n                <button ion-button block round icon-end (click)="getProductCatalog();" [ngStyle]="{\'background-color\': buttonColor}">\n\n                    Passer commande\n\n                    <svg class="feather">\n\n                        <use xlink:href="assets/imgs/catalogbook.svg"/>\n\n                    </svg>\n\n                </button>\n\n                <p text-center>\n\n                    <br />Méthode de paiements acceptées:\n\n                    <br> \n\n                    <img src="../../assets/imgs/paypal-logo.png">  \n\n                    <img src="../../assets/imgs/bancontact-logo.png">\n\n                    <ion-icon name="ios-cash-outline"></ion-icon>\n\n                </p> \n\n            </ion-col>\n\n        </ion-row>\n\n        <ion-row class="fill" text-center>\n\n            <p color="text-light">&copy; Western Sandwich 2018</p>  \n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
     ], HomePage);
     return HomePage;
 }());

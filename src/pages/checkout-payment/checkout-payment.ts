@@ -24,14 +24,13 @@ declare var Stripe: any;
 })
 export class CheckoutPaymentPage {
 
-    private stripe = Stripe('pk_test_jpI6XzhcNeNPSGxicVyDJd2w');
     private paymentRequest: any;
     private card: any;
     private canMakePayment: boolean = true;
     private moltinCart: MoltinCart = this.navParams.get('cart');
     private customer: {} = this.navParams.get('customer');
 
-    private selectedPaymentMethod: string = "apple-pay";
+    private selectedPaymentMethod: string = "bancontact";
     private formIsValid: boolean = false;
 
     private promoCode: string;
@@ -45,76 +44,37 @@ export class CheckoutPaymentPage {
     }
 
     ionViewDidLoad() {
-        this.mountPaymentButton();
-        this.constructPaymentForm();
     }
 
     constructPaymentRequest() {
         let items = this.moltinCart.data.map(item => {
             return {
                 "amount": item.meta.display_price.with_tax.value.amount,
-                "label": item.name
+                "label": item.name,
             }
         })
-        this.paymentRequest = this.stripe.paymentRequest({
-            country: 'US',
+        this.paymentRequest = {
+            country: 'BE',
             currency: this.moltinCart.meta.display_price.with_tax.currency.toLowerCase(),
             total: {
-                label: 'Total Payment',
+                label: 'Paiement total',
                 amount: this.moltinCart.meta.display_price.with_tax.amount,
             },
-            requestPayerName: true,
-            requestPayerEmail: true,
             displayItems: items
-        });
+        };
 
-        this.paymentRequest.on('token', (ev) => {
-            ev.complete('success');
-            this.moveToConfirmationPage(ev.token);
-        });
+        // this.paymentRequest.on('token', (ev) => {
+        //     ev.complete('success');
+        //     this.moveToConfirmationPage(ev.token);
+        // });
 
-        this.paymentRequest.on('error', (ev) => {
-            console.log(ev);
-        });
+        // this.paymentRequest.on('error', (ev) => {
+        //     console.log(ev);
+        // });
 
-        this.paymentRequest.on('cancel', (ev) => {
-            console.log(ev);
-        })
-    }
-
-    mountPaymentButton() {
-        const elements = this.stripe.elements();
-        const prButton = elements.create('paymentRequestButton', {
-            "paymentRequest": this.paymentRequest,
-            style: {
-                paymentRequestButton: {
-                    theme: 'light-outline',
-                    height: '44px',
-                },
-            },
-        });
-
-        (async () => {
-            // Check the availability of the Payment Request API first.
-            const result = await this.paymentRequest.canMakePayment();
-            if (result) {
-                prButton.mount('#payment-request-button');
-            } else {
-                this.canMakePayment = false;
-                this.selectedPaymentMethod = "card";
-            }
-        })();
-    }
-
-    constructPaymentForm() {
-        this.card = this.stripe.elements().create('card', {
-            hidePostalCode: true
-        });
-        this.card.mount("#card-element");
-
-        this.card.on('change', (ev) => {
-            this.formIsValid = ev.complete;
-        });
+        // this.paymentRequest.on('cancel', (ev) => {
+        //     console.log(ev);
+        // })
     }
 
     applyPromoCode() {
@@ -125,21 +85,14 @@ export class CheckoutPaymentPage {
     }
 
     confirmOrder() {
-        if (this.selectedPaymentMethod == "card") {
-            this.stripe.createToken(this.card).then((result) => {
-                if (result.error) {
-                    console.error(result.error);
-                } else {
-                    this.moveToConfirmationPage(result.token);
-                }
-            });
+        if (this.selectedPaymentMethod == "bancontact") {
+            this.moveToConfirmationPage();
         }
     }
 
-    moveToConfirmationPage(token) {
+    moveToConfirmationPage() {
         this.navController.push('checkout-confirmation', {
-            'customer': this.customer,
-            'token': token
+            'customer': this.customer
         });
     }
 }

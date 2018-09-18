@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar hideBackButton>
         <ion-title>
-            Catalogue
+            Menu
         </ion-title>
         <ion-buttons left>
             <button ion-button icon-only (click)="closeModal()">
@@ -22,36 +22,30 @@
 
 <ion-content>
  <div class="container">
-     <ion-col class="header" (click)="getProductList('Haircare')">
-         <h1>Haircare</h1>
-          <h3>View all</h3>
-      </ion-col>
-          <ion-slides pager="true">
-              <ion-item>
-              <ion-row>
-                <ion-slides>
-                  <ion-col col-33 *ngFor="let product of filteredHair">
-                    <div class="card card-1" (click)="goToProduct(product.products);">
-                        <img src="{{product.image}}">
-                      </div>
-                        <h4>{{ product.productName }}</h4>
-                        <p>{{ product.productFormattedPrice }}</p>
-                  </ion-col>
-                </ion-slides>
-                </ion-row>
-            </ion-item>
-          </ion-slides>
-
-      <ion-col class="header" (click)="getProductList('Facial Skincare')">
-          <h1>Facial Skincare</h1>
-           <h3>View all</h3>
+        <ion-col class="header" (click)="getProductList('Sandwichs')">
+            <h1>Sandwichs</h1>
+            <h3>Voir tout</h3>
+        </ion-col>
+        <ion-slides>
+            <ion-col col-33 *ngFor="let product of listSandwichs"> 
+                <div class="card card-1" (click)="goToProduct(product.products);">
+                    <img src="{{product.image}}">
+                </div>
+                <h4>{{ product.productName }}</h4>
+                <p>{{ product.productFormattedPrice }}</p>
+            </ion-col>
+        </ion-slides>
+        
+      <ion-col class="header" (click)="getProductList('Pates')">
+          <h1>Pâtes</h1>
+           <h3>Voir tout</h3>
        </ion-col>
  <ion-slides pager="true">
      <ion-item>
      <ion-row>
        <ion-item no-lines text-wrap>
        <ion-slides>
-         <ion-col col-33 *ngFor="let product of filteredCatSkin">
+         <ion-col col-33 *ngFor="let product of listPates">
            <div class="card card-1" (click)="goToProduct(product.products);">
                <img src="{{product.image}}">
              </div>
@@ -64,16 +58,16 @@
    </ion-item>
  </ion-slides>
 
- <ion-col class="header" (click)="getProductList('Body Skincare')">
-     <h1>Body Skincare</h1>
-      <h3>View all</h3>
+ <ion-col class="header" (click)="getProductList('Boissons')">
+     <h1>Boissons</h1>
+      <h3>Voir tout</h3>
   </ion-col>
 <ion-slides pager="true">
 <ion-item>
 <ion-row>
   <ion-item no-lines text-wrap>
   <ion-slides>
-    <ion-col col-33 *ngFor="let product of filteredCatSkin">
+    <ion-col col-33 *ngFor="let product of listBoissons">
       <div class="card card-1" (click)="goToProduct(product.products);">
           <img src="{{product.image}}">
         </div>

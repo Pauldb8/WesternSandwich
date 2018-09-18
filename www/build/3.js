@@ -1,15 +1,15 @@
 webpackJsonp([3],{
 
-/***/ 847:
+/***/ 721:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReceiptPageModule", function() { return ReceiptPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__receipt__ = __webpack_require__(860);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__verification_verification__ = __webpack_require__(861);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__receipt__ = __webpack_require__(734);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__verification_verification__ = __webpack_require__(735);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,14 +44,14 @@ var ReceiptPageModule = (function () {
 
 /***/ }),
 
-/***/ 860:
+/***/ 734:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReceiptPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_moltin_moltin__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_moltin_moltin__ = __webpack_require__(356);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -128,7 +128,7 @@ var ReceiptPage = (function () {
     };
     ReceiptPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-receipt',template:/*ion-inline-start:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/receipt/receipt.html"*/'<ion-header>\n    <ion-navbar class="light" hideBackButton>\n            <ion-buttons start>\n                    <button ion-button icon-only (click)="goToHome();">\n                        <svg class="feather">\n                            <use xlink:href="assets/icon/feather-sprite.svg#home" />\n                        </svg>\n                    </button>\n                </ion-buttons>\n        <ion-title>\n            Your Receipt\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-grid padding>\n        <ion-row text-center>\n            <svg class="feather">\n                <use xlink:href="assets/icon/feather-sprite.svg#check-circle" />\n            </svg>\n        </ion-row>\n        <ion-row text-center>\n            <ion-col>\n                <h2>Thank you!</h2>\n                <p>Your purchases have been processed.</p>\n            </ion-col>\n        </ion-row>\n\n        <ion-row no-padding>\n            <ion-segment [(ngModel)]="selectedSegment">\n                <ion-segment-button value="receipt">\n                    Your Receipt\n                </ion-segment-button>\n                <ion-segment-button value="order">\n                    Order Overview\n                </ion-segment-button>\n            </ion-segment>\n        </ion-row>\n\n        <div *ngIf="selectedSegment == \'receipt\'">\n            <ion-row text-center class="order-details">\n                <ion-col>\n                    <h3>Time:</h3>\n                    <span>{{ order.meta.timestamps.created_at | date:\'shortTime\' }}</span>\n                </ion-col>\n                <ion-col>\n                    <h3>Date:</h3>\n                    <span>{{ order.meta.timestamps.created_at | date:\'shortDate\' }}</span>\n                </ion-col>\n                <ion-col>\n                    <h3>Total Items:</h3>\n                    <span>{{ cartData.length }}</span>\n                </ion-col>\n            </ion-row>\n\n            <ion-row class="receipt-verification">\n                <verification-display time="{{ order.meta.timestamps.created_at | date:\'shortTime\' }}"></verification-display>\n            </ion-row>\n\n            <ion-row text-center class="info">\n                <ion-col>\n                    <p>Please be prepared to show the above code to the attendant on leaving the store if requested.</p>\n                </ion-col>\n            </ion-row>\n\n        </div>\n\n        <div *ngIf="selectedSegment == \'order\'">\n            <ion-item *ngFor="let item of cartData" class="product">\n                <ion-thumbnail item-start>\n                    <img src="{{ getProductImage(item.product_id) }}">\n                </ion-thumbnail>\n                <h2>{{ item.name }}</h2>\n                <ion-note item-end>\n                    <h4>{{ item.meta.display_price.with_tax.value.formatted }}</h4>\n                    <span>x{{ item.quantity }}</span>\n                </ion-note>\n            </ion-item>\n\n            <ion-item class="subtotal">\n                <div>\n                    <h4>Subtotal:</h4>\n                    <span>{{ subtotal }}</span>\n                </div>\n                <div *ngIf="promoCode != null" class="promo-code">\n                    <h4>Promo Code:</h4>\n                    <span>{{ promoCode }}</span>\n                </div>\n            </ion-item>\n            <ion-item class="total" no-lines>\n                <div>\n                    <h4>Total:</h4>\n                    <span>{{ cart.meta.display_price.with_tax.formatted }}</span>\n                </div>\n            </ion-item>\n        </div>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/receipt/receipt.html"*/
+            selector: 'page-receipt',template:/*ion-inline-start:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\receipt\receipt.html"*/'<ion-header>\n\n    <ion-navbar class="light" hideBackButton>\n\n            <ion-buttons start>\n\n                    <button ion-button icon-only (click)="goToHome();">\n\n                        <svg class="feather">\n\n                            <use xlink:href="assets/icon/feather-sprite.svg#home" />\n\n                        </svg>\n\n                    </button>\n\n                </ion-buttons>\n\n        <ion-title>\n\n            Your Receipt\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-grid padding>\n\n        <ion-row text-center>\n\n            <svg class="feather">\n\n                <use xlink:href="assets/icon/feather-sprite.svg#check-circle" />\n\n            </svg>\n\n        </ion-row>\n\n        <ion-row text-center>\n\n            <ion-col>\n\n                <h2>Thank you!</h2>\n\n                <p>Your purchases have been processed.</p>\n\n            </ion-col>\n\n        </ion-row>\n\n\n\n        <ion-row no-padding>\n\n            <ion-segment [(ngModel)]="selectedSegment">\n\n                <ion-segment-button value="receipt">\n\n                    Your Receipt\n\n                </ion-segment-button>\n\n                <ion-segment-button value="order">\n\n                    Order Overview\n\n                </ion-segment-button>\n\n            </ion-segment>\n\n        </ion-row>\n\n\n\n        <div *ngIf="selectedSegment == \'receipt\'">\n\n            <ion-row text-center class="order-details">\n\n                <ion-col>\n\n                    <h3>Time:</h3>\n\n                    <span>{{ order.meta.timestamps.created_at | date:\'shortTime\' }}</span>\n\n                </ion-col>\n\n                <ion-col>\n\n                    <h3>Date:</h3>\n\n                    <span>{{ order.meta.timestamps.created_at | date:\'shortDate\' }}</span>\n\n                </ion-col>\n\n                <ion-col>\n\n                    <h3>Total Items:</h3>\n\n                    <span>{{ cartData.length }}</span>\n\n                </ion-col>\n\n            </ion-row>\n\n\n\n            <ion-row class="receipt-verification">\n\n                <verification-display time="{{ order.meta.timestamps.created_at | date:\'shortTime\' }}"></verification-display>\n\n            </ion-row>\n\n\n\n            <ion-row text-center class="info">\n\n                <ion-col>\n\n                    <p>Please be prepared to show the above code to the attendant on leaving the store if requested.</p>\n\n                </ion-col>\n\n            </ion-row>\n\n\n\n        </div>\n\n\n\n        <div *ngIf="selectedSegment == \'order\'">\n\n            <ion-item *ngFor="let item of cartData" class="product">\n\n                <ion-thumbnail item-start>\n\n                    <img src="{{ getProductImage(item.product_id) }}">\n\n                </ion-thumbnail>\n\n                <h2>{{ item.name }}</h2>\n\n                <ion-note item-end>\n\n                    <h4>{{ item.meta.display_price.with_tax.value.formatted }}</h4>\n\n                    <span>x{{ item.quantity }}</span>\n\n                </ion-note>\n\n            </ion-item>\n\n\n\n            <ion-item class="subtotal">\n\n                <div>\n\n                    <h4>Subtotal:</h4>\n\n                    <span>{{ subtotal }}</span>\n\n                </div>\n\n                <div *ngIf="promoCode != null" class="promo-code">\n\n                    <h4>Promo Code:</h4>\n\n                    <span>{{ promoCode }}</span>\n\n                </div>\n\n            </ion-item>\n\n            <ion-item class="total" no-lines>\n\n                <div>\n\n                    <h4>Total:</h4>\n\n                    <span>{{ cart.meta.display_price.with_tax.formatted }}</span>\n\n                </div>\n\n            </ion-item>\n\n        </div>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\receipt\receipt.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
@@ -143,7 +143,7 @@ var ReceiptPage = (function () {
 
 /***/ }),
 
-/***/ 861:
+/***/ 735:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -168,7 +168,7 @@ var VerificationDisplay = (function () {
     ], VerificationDisplay.prototype, "time", void 0);
     VerificationDisplay = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'verification-display',template:/*ion-inline-start:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/receipt/verification/verification.html"*/'<h3>{{ time }}</h3>'/*ion-inline-end:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/receipt/verification/verification.html"*/
+            selector: 'verification-display',template:/*ion-inline-start:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\receipt\verification\verification.html"*/'<h3>{{ time }}</h3>'/*ion-inline-end:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\receipt\verification\verification.html"*/
         })
     ], VerificationDisplay);
     return VerificationDisplay;

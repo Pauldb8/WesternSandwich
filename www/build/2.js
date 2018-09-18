@@ -1,15 +1,15 @@
 webpackJsonp([2],{
 
-/***/ 839:
+/***/ 714:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckoutConfirmationModule", function() { return CheckoutConfirmationModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__checkout_confirmation__ = __webpack_require__(852);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_cart_progress_cart_progress_module__ = __webpack_require__(848);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__checkout_confirmation__ = __webpack_require__(727);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_cart_progress_cart_progress_module__ = __webpack_require__(722);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,14 +44,14 @@ var CheckoutConfirmationModule = (function () {
 
 /***/ }),
 
-/***/ 848:
+/***/ 722:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CartProgressModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cart_progress__ = __webpack_require__(849);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cart_progress__ = __webpack_require__(723);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(47);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -84,7 +84,7 @@ var CartProgressModule = (function () {
 
 /***/ }),
 
-/***/ 849:
+/***/ 723:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -103,9 +103,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var CartProgress = (function () {
     function CartProgress() {
         this.elements = [
-            "Details",
-            "Payment",
-            "Confirm"
+            "Détails",
+            "Paiement",
+            "Confirmation"
         ];
     }
     CartProgress.prototype.getElements = function () {
@@ -121,7 +121,7 @@ var CartProgress = (function () {
     ], CartProgress.prototype, "current", void 0);
     CartProgress = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'cart-progress',template:/*ion-inline-start:"/Users/georgefitzgibbons/dev/mobile-checkout/src/components/cart-progress/cart-progress.html"*/'<ul>\n    <li *ngFor="let number of getElements();" [ngClass]="{ \'active\': number < current }">\n        <span></span>\n        <p>{{ elements[number - 1]}}</p>\n    </li>\n</ul>'/*ion-inline-end:"/Users/georgefitzgibbons/dev/mobile-checkout/src/components/cart-progress/cart-progress.html"*/
+            selector: 'cart-progress',template:/*ion-inline-start:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\components\cart-progress\cart-progress.html"*/'<ul>\n\n    <li *ngFor="let number of getElements();" [ngClass]="{ \'active\': number < current }">\n\n        <span></span>\n\n        <p>{{ elements[number - 1]}}</p>\n\n    </li>\n\n</ul>'/*ion-inline-end:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\components\cart-progress\cart-progress.html"*/
         })
     ], CartProgress);
     return CartProgress;
@@ -131,14 +131,14 @@ var CartProgress = (function () {
 
 /***/ }),
 
-/***/ 852:
+/***/ 727:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckoutConfirmationPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_moltin_moltin__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_moltin_moltin__ = __webpack_require__(356);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -227,7 +227,7 @@ var CheckoutConfirmationPage = (function () {
     };
     CheckoutConfirmationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-checkout-confirmation",template:/*ion-inline-start:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/checkout-confirmation/checkout-confirmation.html"*/'<ion-header>\n    <ion-navbar class="grey">\n        <ion-title>\n            Checkout\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-grid no-padding>\n        <ion-row>\n            <cart-progress amount=3 current=3></cart-progress>\n        </ion-row>\n    </ion-grid>\n    <ion-grid padding>\n        <ion-row class="headings" *ngIf="promoCode != null">\n            <h4>Voucher Code</h4>\n            <span>{{ promoCode }}</span>\n        </ion-row>\n        <ion-row class="headings">\n            <h4>Payment Method</h4>\n            <span>{{ token.card.brand }} {{ token.card.last4 }}</span>\n        </ion-row>\n        <ion-row class="headings">\n            <h4>Your Items</h4>\n            <span>\n                <a (click)="editCart();">Edit</a>\n            </span>\n        </ion-row>\n\n        <ion-item *ngFor="let item of cartData">\n            <ion-thumbnail item-start>\n                <img src="{{ getProductImage(item.product_id) }}">\n            </ion-thumbnail>\n            <h2>{{ item.name }}</h2>\n            <ion-note item-end>\n                <h4>{{ item.meta.display_price.with_tax.value.formatted }}</h4>\n                <span>x{{ item.quantity }}</span>\n            </ion-note>\n        </ion-item>\n    </ion-grid>\n</ion-content>\n\n<ion-footer *ngIf="cart.meta != null && cart.data.length > 0">\n    <ion-toolbar>\n        <ion-grid>\n            <ion-row>\n                <ion-col class="total">\n                    <h4>Total</h4>\n                    <span>{{ cart.meta.display_price.with_tax.formatted }}</span>\n                </ion-col>\n                <ion-col>\n                    <button ion-button block round icon-end (click)="pay();">\n                        Pay Now\n                        <svg class="feather">\n                            <use xlink:href="assets/icon/feather-sprite.svg#arrow-right" />\n                        </svg>\n                    </button>\n                </ion-col>\n            </ion-row>\n        </ion-grid>\n    </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/Users/georgefitzgibbons/dev/mobile-checkout/src/pages/checkout-confirmation/checkout-confirmation.html"*/
+            selector: "page-checkout-confirmation",template:/*ion-inline-start:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\checkout-confirmation\checkout-confirmation.html"*/'<ion-header>\n\n    <ion-navbar class="grey">\n\n        <ion-title>\n\n            Checkout\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-grid no-padding>\n\n        <ion-row>\n\n            <cart-progress amount=3 current=3></cart-progress>\n\n        </ion-row>\n\n    </ion-grid>\n\n    <ion-grid padding>\n\n        <ion-row class="headings" *ngIf="promoCode != null">\n\n            <h4>Voucher Code</h4>\n\n            <span>{{ promoCode }}</span>\n\n        </ion-row>\n\n        <ion-row class="headings">\n\n            <h4>Payment Method</h4>\n\n            <span>{{ token.card.brand }} {{ token.card.last4 }}</span>\n\n        </ion-row>\n\n        <ion-row class="headings">\n\n            <h4>Your Items</h4>\n\n            <span>\n\n                <a (click)="editCart();">Edit</a>\n\n            </span>\n\n        </ion-row>\n\n\n\n        <ion-item *ngFor="let item of cartData">\n\n            <ion-thumbnail item-start>\n\n                <img src="{{ getProductImage(item.product_id) }}">\n\n            </ion-thumbnail>\n\n            <h2>{{ item.name }}</h2>\n\n            <ion-note item-end>\n\n                <h4>{{ item.meta.display_price.with_tax.value.formatted }}</h4>\n\n                <span>x{{ item.quantity }}</span>\n\n            </ion-note>\n\n        </ion-item>\n\n    </ion-grid>\n\n</ion-content>\n\n\n\n<ion-footer *ngIf="cart.meta != null && cart.data.length > 0">\n\n    <ion-toolbar>\n\n        <ion-grid>\n\n            <ion-row>\n\n                <ion-col class="total">\n\n                    <h4>Total</h4>\n\n                    <span>{{ cart.meta.display_price.with_tax.formatted }}</span>\n\n                </ion-col>\n\n                <ion-col>\n\n                    <button ion-button block round icon-end (click)="pay();">\n\n                        Pay Now\n\n                        <svg class="feather">\n\n                            <use xlink:href="assets/icon/feather-sprite.svg#arrow-right" />\n\n                        </svg>\n\n                    </button>\n\n                </ion-col>\n\n            </ion-row>\n\n        </ion-grid>\n\n    </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Pauld\IonicProjects\WesternSandwich\src\pages\checkout-confirmation\checkout-confirmation.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_moltin_moltin__["a" /* Moltin */],
